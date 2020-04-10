@@ -45,10 +45,10 @@ public class OperationalAdapter extends RecyclerView.Adapter<OperationalAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull OperationalAdapter.GridViewHolder holder, int position) {
-        Operational operational = new Operational();
+        Operational operational = listOperational.get(position);
         Glide.with(holder.itemView.getContext())
-                .load(listOperational.get(position).getImage())
-                .apply(new RequestOptions().override(350, 550))
+                .load(operational.getImage())
+                .apply(new RequestOptions().override(250, 250))
                 .into(holder.operationalImage);
         holder.operationalName.setText(operational.getName());
         holder.operationalNumber.setText(operational.getNumber());

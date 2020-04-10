@@ -46,11 +46,10 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.CardVi
 
     @Override
     public void onBindViewHolder(@NonNull HospitalAdapter.CardViewViewHolder holder, int position) {
-
         Hospital hospital = listHospital.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(hospital.getImage())
-                .apply(new RequestOptions().override(350, 550))
+                .apply(new RequestOptions().override(350, 180))
                 .into(holder.hospitalImage);
         holder.hospitalName.setText(hospital.getName());
         holder.hospitalAddress.setText(hospital.getAddress());

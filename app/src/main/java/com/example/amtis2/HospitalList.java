@@ -16,9 +16,13 @@ public class HospitalList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospital_list);
 
+        list.addAll(HospitalData.getListData());
+
         RecyclerView rvHospital = findViewById(R.id.rv_hospital);
-        rvHospital.setLayoutManager(new LinearLayoutManager(this));
         HospitalAdapter hospitalAdapter = new HospitalAdapter(list, this);
+
+        rvHospital.setHasFixedSize(true);
         rvHospital.setAdapter(hospitalAdapter);
+        rvHospital.setLayoutManager(new LinearLayoutManager(this));
     }
 }

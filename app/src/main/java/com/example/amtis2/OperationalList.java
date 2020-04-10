@@ -16,9 +16,13 @@ public class OperationalList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operational_list);
 
+        list.addAll(OperationalData.getListData());
+
         RecyclerView rvOperational = findViewById(R.id.rv_operational);
-        rvOperational.setLayoutManager(new GridLayoutManager(this, 2));
         OperationalAdapter operationalAdapter = new OperationalAdapter(list);
+
+        rvOperational.setHasFixedSize(true);
         rvOperational.setAdapter(operationalAdapter);
+        rvOperational.setLayoutManager(new GridLayoutManager(this, 2));
     }
 }
