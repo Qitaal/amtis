@@ -5,4 +5,5 @@
     <string name="operational">OPERATIONAL</string>
     <string name="amtis">FREE AMBULANCE</string>
     <string name="title_activity_hospital_list">HospitalList</string>
+    <string name="nama_mobil">NAMA MOBIL</string>
 </resources>

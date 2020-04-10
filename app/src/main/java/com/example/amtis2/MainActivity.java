@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
             case R.id.btn_operational :{
-                Toast.makeText(MainActivity.this, "Operational", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, OperationalList.class));
                 break;
             }
             case R.id.btn_amtis :{
