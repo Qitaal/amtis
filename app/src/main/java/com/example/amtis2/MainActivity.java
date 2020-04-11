@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
             case R.id.btn_amtis :{
-                Toast.makeText(MainActivity.this, "Amtis", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, AmtisList.class));
                 break;
             }
         }
