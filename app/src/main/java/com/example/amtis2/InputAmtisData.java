@@ -63,7 +63,7 @@ public class InputAmtisData extends AppCompatActivity implements View.OnClickLis
         }
 
         String sql = "INSERT INTO amtis (name, address, date, destination)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+                "VALUES (?, ?, ?, ?)";
         database.execSQL(sql, new String[]{name, address, date, destination});
         startActivity(new Intent(this, AmtisList.class));
     }
