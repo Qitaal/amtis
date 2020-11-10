@@ -1,2 +1,2 @@
 # amtis
-Tulongggg
+Projek akhir battistrada course Andorid Fundamental
